@@ -1,0 +1,178 @@
+﻿/* Global Box-Sizing Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+    --color-bg: #121212; /* Main background color */
+    --color-text: #fff; /* General text color */
+    --color-container: #1e1e1e; /* Container background */
+    --color-input-bg: #333; /* Input field background */
+    --color-border: #444; /* Border color */
+    --color-accent: #ff4081; /* Accent color for buttons, links */
+    --color-primary: #005cff; /* Main Blue - Primary color for headings, buttons, focus */
+    --color-hover: #e20073; /* Hover color for buttons */
+    --color-footer: #aaa; /* Footer text color */
+    --shadow-light: rgba(0, 0, 0, 0.2); /* Light shadow for containers */
+    --font-family: 'Poppins', sans-serif;
+    --transition-speed: 0.3s; /* Transition duration */
+    --container-gradient: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    overflow-x: hidden;
+}
+
+/* Header Section */
+.header {
+    background: var(--container-gradient);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .header h2 {
+        margin: 0;
+        color: var(--color-primary);
+    }
+
+.logout-button {
+    background: var(--color-primary);
+    color: var(--color-text);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background var(--transition-speed);
+}
+
+    .logout-button:hover {
+        background: var(--color-hover);
+    }
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left Section: User List */
+.left-section {
+    flex: 2;
+    background-color: var(--color-container);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-light);
+
+    a
+{
+    background-color:red;
+    color:white;
+    padding:7px;
+    border-radius:10px;
+    text-decoration:none;
+}
+}
+
+    .left-section h3 {
+        color: var(--color-primary);
+        margin-bottom: 15px;
+    }
+
+.table-container {
+    overflow-x: auto;
+}
+
+    .table-container table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .table-container th,
+    .table-container td {
+        padding: 12px 15px;
+        border: 1px solid var(--color-border);
+        text-align: left;
+    }
+
+    .table-container th {
+        background-color: var(--color-primary);
+        color: var(--color-text);
+    }
+
+    .table-container tr:nth-child(even) {
+        background-color: var(--color-input-bg);
+    }
+
+/* Right Section: Add New User */
+.right-section {
+    flex: 1;
+    background-color: var(--color-container);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+    .right-section h3 {
+        color: var(--color-primary);
+        margin-bottom: 15px;
+    }
+
+.add-user-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-field {
+    background-color: var(--color-input-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    padding: 10px;
+    border-radius: 4px;
+    transition: border-color var(--transition-speed);
+}
+
+    .input-field:focus {
+        outline: none;
+        border-color: var(--color-primary);
+    }
+
+.btn-add {
+    background: var(--color-primary);
+    color: var(--color-text);
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background var(--transition-speed);
+}
+
+    .btn-add:hover {
+        background: var(--color-hover);
+    }
+
+/* Footer Section */
+.footer {
+    background: var(--container-gradient);
+    padding: 15px;
+    text-align: center;
+    color: var(--color-footer);
+    margin-top: 20px;
+}
+
+    .footer p {
+        margin: 0;
+        font-size: 0.9em;
+    }
